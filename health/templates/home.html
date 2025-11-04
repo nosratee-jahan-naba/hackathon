@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="max-w-6xl mx-auto px-4 md:px-6 py-6">
+    <h2 class="text-xl">Health Check-ins</h2>
+    <ul>
+        {% for check in checks %}
+            <li>{{ check.user_name }} - Mood: {{ check.mood }} - {{ check.note }}</li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মনবন্ধু | MonBondhu</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-green-50 to-white dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-slate-100">
+    <header class="theme-header sticky top-0 z-50 backdrop-blur bg-white/60 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="cute-avatar cute-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 id="brandTitle" class="text-lg md:text-xl font-extrabold">মনবন্ধু</h1>
+                    <p id="brandTag" class="tiny text-slate-600 dark:text-slate-300 -mt-0.5">আপনার স্থানীয় স্বাস্থ্যসাথী</p>
+                </div>
+            </div>
+            <nav class="flex items-center gap-2">
+                <a href="#features" class="hidden md:inline tiny px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">বৈশিষ্ট্য</a>
+                <a href="#about" class="hidden md:inline tiny px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">আমাদের সম্পর্কে</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+    <!-- Content goes here -->
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="max-w-6xl mx-auto px-4 md:px-6 py-6">
+    <h2 class="text-xl">Mental Health Check-in</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="mood">Mood:</label>
+            <select name="mood" id="mood" required>
+                <option value="1">Bad</option>
+                <option value="2">Okay</option>
+                <option value="3">Good</option>
+                <option value="4">Great</option>
+            </select>
+        </div>
+        <div>
+            <label for="note">Additional Notes (Optional):</label>
+            <textarea name="note" id="note" rows="4" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <button type="submit" class="theme-button-primary">Save Check-in</button>
+    </form>
+</main>
+{% endblock %}
